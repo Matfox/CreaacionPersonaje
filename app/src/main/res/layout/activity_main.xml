@@ -1,464 +1,539 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
+
+
+    android:orientation="vertical"
     tools:context="ga.leliadoura.dam2.creacionpersonaje.MainActivity">
 
-
-    <TextView
-        android:id="@+id/restantes"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/maximo"
-        android:textColor="@color/negro"
-        android:layout_alignBaseline="@+id/percepcion"
-        android:layout_alignBottom="@+id/percepcion"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="32dp"
-        android:layout_marginEnd="32dp" />
+        android:layout_gravity="end"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/masfuerza"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:text="@string/mas"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/menosfuerza"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/masfuerza"
-        android:layout_toRightOf="@+id/masfuerza"
-        android:text="@string/menos" />
-
-    <TextView
-        android:id="@+id/texto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/puntos"
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/sumafuerza"
-        android:layout_alignRight="@+id/restantes"
-        android:layout_alignEnd="@+id/restantes" />
-
-    <Button
-        android:id="@+id/maspercepcion"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/masfuerza"
-        android:layout_alignStart="@+id/masfuerza"
-        android:layout_below="@+id/masfuerza"
-        android:text="@string/mas" />
-
-    <Button
-        android:id="@+id/menospercepcion"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/menosfuerza"
-        android:layout_alignStart="@+id/menosfuerza"
-        android:layout_below="@+id/menosfuerza"
-        android:text="@string/menos" />
-
-    <Button
-        android:id="@+id/masresistencia"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/maspercepcion"
-        android:layout_toLeftOf="@+id/menosresistencia"
-        android:layout_toStartOf="@+id/menosresistencia"
-        android:text="@string/mas" />
-
-    <Button
-        android:id="@+id/menosresistencia"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/menospercepcion"
-        android:layout_alignStart="@+id/menospercepcion"
-        android:layout_below="@+id/menospercepcion"
-        android:text="@string/menos" />
-
-    <Button
-        android:id="@+id/mascarisma"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/menosresistencia"
-        android:layout_toLeftOf="@+id/menosresistencia"
-        android:layout_toStartOf="@+id/menosresistencia"
-        android:text="@string/mas" />
-
-    <Button
-        android:id="@+id/menoscarisma"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/menosresistencia"
-        android:layout_alignStart="@+id/menosresistencia"
-        android:layout_below="@+id/menosresistencia"
-        android:text="@string/menos" />
-
-    <TextView
-        android:id="@+id/fuerza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/negro"
-        android:text="@string/fuerza"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/percepcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/percepcion"
-        android:textColor="@color/negro"
-        android:layout_below="@+id/masfuerza"
-        android:layout_alignLeft="@+id/resistencia"
-        android:layout_alignStart="@+id/resistencia" />
-
-    <TextView
-        android:id="@+id/resistencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/resistencia"
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/masresistencia"
-        android:layout_alignLeft="@+id/carisma"
-        android:layout_alignStart="@+id/carisma" />
-
-    <TextView
-        android:id="@+id/carisma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/carisma"
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/mascarisma"
-        android:layout_alignLeft="@+id/inteligencia"
-        android:layout_alignStart="@+id/inteligencia" />
-
-    <TextView
-        android:id="@+id/fuerzaasignada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minimo"
-        android:textColor="@color/negro"
-        android:layout_below="@+id/fuerza"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/percepcionasignada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minimo"
-        android:textColor="@color/negro"
-        android:layout_below="@+id/percepcion"
-        android:layout_alignLeft="@+id/fuerzaasignada"
-        android:layout_alignStart="@+id/fuerzaasignada" />
-
-    <TextView
-        android:id="@+id/resistenciaasignada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minimo"
-        android:textColor="@color/negro"
-        android:layout_below="@+id/resistencia"
-        android:layout_alignLeft="@+id/percepcionasignada"
-        android:layout_alignStart="@+id/percepcionasignada" />
-
-    <TextView
-        android:id="@+id/carismaasignada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minimo"
-        android:textColor="@color/negro"
-        android:layout_below="@+id/carisma"
-        android:layout_alignLeft="@+id/resistenciaasignada"
-        android:layout_alignStart="@+id/resistenciaasignada" />
-
-    <Button
-        android:id="@+id/masinteligencia"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/mascarisma"
-        android:layout_alignStart="@+id/mascarisma"
-        android:layout_below="@+id/mascarisma"
-        android:text="@string/mas"
-        android:textColor="@color/negro" />
-
-    <Button
-        android:id="@+id/menosinteligencia"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/menoscarisma"
-        android:layout_alignStart="@+id/menoscarisma"
-        android:layout_below="@+id/menoscarisma"
-        android:text="@string/menos"
-        android:textColor="@color/negro" />
-
-    <Button
-        android:id="@+id/masagilidad"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/mascarisma"
-        android:layout_below="@+id/menosinteligencia"
-        android:text="@string/mas" />
-
-    <Button
-        android:id="@+id/menosagilidad"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/masinteligencia"
-        android:layout_toEndOf="@+id/masagilidad"
-        android:layout_toRightOf="@+id/masagilidad"
-        android:text="@string/menos" />
-
-    <Button
-        android:id="@+id/massuerte"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignLeft="@+id/mascarisma"
-        android:layout_below="@+id/menosagilidad"
-        android:text="@string/mas" />
-
-    <Button
-        android:id="@+id/menossuerte"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/masagilidad"
-        android:layout_toEndOf="@+id/massuerte"
-        android:layout_toRightOf="@+id/massuerte"
-        android:text="@string/menos" />
-
-    <TextView
-        android:id="@+id/inteligencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:singleLine="false"
-        android:text="@string/inteligencia"
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/masinteligencia"
-        android:layout_alignLeft="@+id/agilidad"
-        android:layout_alignStart="@+id/agilidad" />
-
-    <TextView
-        android:id="@+id/agilidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/agilidad"
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/masagilidad"
-        android:layout_alignRight="@+id/fuerza"
-        android:layout_alignEnd="@+id/fuerza" />
-
-    <TextView
-        android:id="@+id/suerte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/suerte"
-        android:textColor="@color/negro"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/agilidad"
-        android:layout_alignStart="@+id/agilidad" />
-
-    <TextView
-        android:id="@+id/inteligenciaasignada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minimo"
-        android:textColor="@color/negro"
-        android:layout_below="@+id/inteligencia"
-        android:layout_alignLeft="@+id/carismaasignada"
-        android:layout_alignStart="@+id/carismaasignada" />
-
-    <TextView
-        android:id="@+id/agilidadasignada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minimo"
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/masagilidad"
-        android:layout_alignLeft="@+id/inteligenciaasignada"
-        android:layout_alignStart="@+id/inteligenciaasignada" />
-
-    <TextView
-        android:id="@+id/suerteasignada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minimo"
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/suerte"
-        android:layout_toLeftOf="@+id/sumaagilidad"
-        android:layout_toStartOf="@+id/sumaagilidad" />
-
-    <TextView
-        android:id="@+id/sumafuerza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/fuerzaasignada"
-        android:layout_toRightOf="@+id/fuerzaasignada"
-        android:layout_toEndOf="@+id/fuerzaasignada" />
-
-    <TextView
-        android:id="@+id/sumapercepcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/percepcionasignada"
-        android:layout_toRightOf="@+id/percepcionasignada"
-        android:layout_toEndOf="@+id/percepcionasignada" />
-
-    <TextView
-        android:id="@+id/sumaresistencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/resistenciaasignada"
-        android:layout_toRightOf="@+id/resistenciaasignada"
-        android:layout_toEndOf="@+id/resistenciaasignada" />
-
-    <TextView
-        android:id="@+id/sumacarisma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/carismaasignada"
-        android:layout_toRightOf="@+id/carismaasignada"
-        android:layout_toEndOf="@+id/carismaasignada" />
-
-    <TextView
-        android:id="@+id/sumainteligencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/inteligenciaasignada"
-        android:layout_toRightOf="@+id/sumacarisma"
-        android:layout_toEndOf="@+id/sumacarisma" />
-
-    <TextView
-        android:id="@+id/sumaagilidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/agilidadasignada"
-        android:layout_toRightOf="@+id/sumainteligencia"
-        android:layout_toEndOf="@+id/sumainteligencia" />
-
-    <TextView
-        android:id="@+id/sumasuerte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/negro"
-        android:layout_alignTop="@+id/suerteasignada"
-        android:layout_toRightOf="@+id/suerteasignada"
-        android:layout_toEndOf="@+id/suerteasignada" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sexo"
-        android:id="@+id/textView"
-        android:layout_below="@+id/nombre"
-        android:layout_alignLeft="@+id/suerte"
-        android:layout_alignStart="@+id/suerte" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sexo"
-        android:orientation="horizontal"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-        <RadioButton
+        <TextView
+            android:id="@+id/texto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hombre"
-            android:id="@+id/radioButton" />
+            android:layout_marginEnd="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/puntos"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
 
-        <RadioButton
+        <TextView
+            android:id="@+id/restantes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mujer" />
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/maximo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
 
-    </RadioGroup>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/equipamiento"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/sexo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/azul"
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nombre"
-        android:id="@+id/textView3"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/suerteasignada"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        <TextView
+            android:id="@+id/fuerza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/fuerza"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/nombre"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_alignRight="@+id/menossuerte"
-        android:layout_alignEnd="@+id/menossuerte"
-        android:layout_alignLeft="@+id/suerteasignada"
-        android:layout_alignStart="@+id/suerteasignada"
-        android:inputType="textCapWords"/>
+        <TextView
+            android:id="@+id/fuerzaasignada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/minimo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/arma"
-        android:id="@+id/arma"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        <TextView
+            android:id="@+id/sumafuerza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="54dp"
+            android:text="@string/suma"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:visibility="invisible" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/compañero"
-        android:id="@+id/compañero"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/arma"
-        android:layout_toEndOf="@+id/arma" />
+        <Button
+            android:id="@+id/masfuerza"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/mas"
+            android:textSize="16sp" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/menosfuerza"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10px"
+            android:text="@string/menos"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/medicina"
-        android:id="@+id/medicina"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/compañero"
-        android:layout_toEndOf="@+id/compañero" />
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/azul"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/percepcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/percepcion"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/percepcionasignada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/minimo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sumapercepcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="54dp"
+            android:text="@string/suma"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/maspercepcion"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/mas"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/menospercepcion"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/menos"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/azul"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/resistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/resistencia"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/resistenciaasignada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/minimo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sumaresistencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="54dp"
+            android:text="@string/suma"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/masresistencia"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/mas"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/menosresistencia"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/menos"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/azul"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/carisma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="52dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/carisma"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/carismaasignada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/minimo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sumacarisma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            android:text="@string/suma"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/mascarisma"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/mas"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/menoscarisma"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/menos"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/azul"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inteligencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/inteligencia"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/inteligenciaasignada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/minimo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sumainteligencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            android:text="@string/suma"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/masinteligencia"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/mas"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/menosinteligencia"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/menos"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/azul"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/agilidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/agilidad"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/agilidadasignada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/minimo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sumaagilidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            android:text="@string/suma"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/masagilidad"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/mas"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/menosagilidad"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/menos"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/azul"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/suerte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="87dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/suerte"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/suerteasignada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/minimo"
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sumasuerte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            android:text="@string/suma"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/massuerte"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/mas"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/menossuerte"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/menos"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/nombre" />
+
+        <EditText
+            android:id="@+id/cuadronombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="40dp"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/sexo" />
+
+        <RadioGroup
+            android:id="@+id/gruposexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/hombre" />
+
+            <RadioButton
+                android:id="@+id/mujer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/mujer" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/equipamiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="onCheckBoxClicked"
+            android:text="@string/equipamiento" />
+
+        <CheckBox
+            android:id="@+id/arma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="onCheckBoxClicked"
+            android:text="@string/arma" />
+
+        <CheckBox
+            android:id="@+id/compañero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="onCheckBoxClicked"
+            android:text="@string/compañero" />
+
+        <CheckBox
+            android:id="@+id/medicina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckBoxClicked"
+            android:text="@string/medicina" />
+
+    </LinearLayout>
 
     <Button
+        android:id="@+id/resumen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/resumen"
-        android:id="@+id/button"
-        android:layout_below="@+id/medicina"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+        android:layout_gravity="center_horizontal"
+        android:text="@string/resumen" />
 
-
-</RelativeLayout>
+</LinearLayout>
